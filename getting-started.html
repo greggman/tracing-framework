@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Getting Started with tracing-framework by Google</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/magic-bootstrap-min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="bootstrap/css/prettify.css" rel="stylesheet">
+    <link href="bootstrap/css/docs.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-37275478-3', 'github.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="">
+                <a href="./overview.html">Overview</a>
+              </li>
+              <li class="active">
+                <a href="./getting-started.html">Get started</a>
+              </li>
+              <li class="">
+                <a href="./event-providers.html">Providers</a>
+              </li>
+              <li class="">
+                <a href="./instrumenting-code.html">Instrument</a>
+              </li>
+              <li class="">
+                <a href="./analyzing-traces.html">Analyze</a>
+              </li>
+              <li class="">
+                <a href="./advanced-features.html">Advanced</a>
+              </li>
+              <li class="">
+                <a href="./extending.html">Extend</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subhead
+    ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+      <div class="container">
+        <h1>Getting Started</h1>
+        <p class="lead">How to capture and view traces.</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav">
+            <li><a href="#installing"><i class="icon-chevron-right"></i> Installing</a></li>
+            <li><a href="#injecting-the-library"><i class="icon-chevron-right"></i> Injecting the library</a></li>
+            <li><a href="#capturing-a-trace"><i class="icon-chevron-right"></i> Capturing a trace</a></li>
+            <li><a href="#viewing-a-trace"><i class="icon-chevron-right"></i> Viewing a trace</a></li>
+            <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+
+
+<!-- Installing
+================================================== -->
+<section id="installing">
+  <div class="page-header">
+    <h1>1. Installing</h1>
+  </div>
+  <p class="lead">Leading line.</p>
+  <p>Some things go here.</p>
+
+  <div class="row-fluid">
+    <div class="span6">
+      <h2>Chrome</h2>
+      <p>The most <strong>awesome, advanced features</strong> require the Chrome extension and some <a href="./advanced-features.html#chrome-flags">optional command line flags</a>. It's recommended you run with the <a href="http://www.chromium.org/getting-involved/dev-channel" target="_blank">dev channel</a> or a <a href="https://www.google.com/intl/en/chrome/browser/canary.html" target="_blank">Canary build</a>. Mac or Linux are preferred!</p>
+      <p><a href="https://chrome.google.com/webstore/detail/web-tracing-framework/gmdhhnlkjmknaopofnadmoamhmnlicme" class="btn btn-primary btn-large" onclick="ga('send', 'event', 'getting_started', 'install');">Install Chrome Extension</a></p>
+    </div>
+    <div class="span6">
+      <h2>Others</h2>
+      <p>None yet! Contribute some! Maybe a Firefox one?</p>
+    </div>
+  </div>
+
+  <h2>Command Line Tools</h2>
+  <p>Requires: node >= 0.8.14</p>
+  <p>You can use NPM to install the <a href="https://npmjs.org/package/tracing-framework" target="_blank">tracing-framework module</a>. You can either install it within your project as a dev dependency or globally to get access to the command line tools.</p>
+
+  <pre>
+$ node -v # ensure at least v0.8.14
+$ npm install -g tracing-framework
+$ wtf-trace myapp.js
+$ wtf-dump myapp-[date].wtf-trace # or open in the UI</pre>
+
+  <h2>Building From Source</h2>
+  <p>building.md/etc</p>
+</section>
+
+
+<!-- Injecting the library
+================================================== -->
+<section id="injecting-the-library">
+  <div class="page-header">
+    <h1>2. Injecting the library</h1>
+  </div>
+  <p class="lead">Leading line.</p>
+  <p>Some things go here.</p>
+
+  <h2><a id="tracing-with-extension"></a>Using the Chrome Extension</h2>
+  <p></p>
+
+  <h2><a id="tracing-manually"></a>Manually Embedding</h2>
+  <p></p>
+
+  <h2><a id="tracing-node-js"></a>node.js</h2>
+  <p></p>
+</section>
+
+
+<!-- Capturing a trace
+================================================== -->
+<section id="capturing-a-trace">
+  <div class="page-header">
+    <h1>3. Capturing a trace</h1>
+  </div>
+  <p class="lead">Leading line.</p>
+  <p>Some things go here.</p>
+
+  <h2>Capturing with the HUD</h2>
+  <p></p>
+
+  <h2>Capturing with Code</h2>
+  <p></p>
+</section>
+
+
+<!-- Viewing a trace
+================================================== -->
+<section id="viewing-a-trace">
+  <div class="page-header">
+    <h1>4. Viewing a trace</h1>
+  </div>
+  <p class="lead">Leading line.</p>
+  <p>Some things go here.</p>
+
+  <h2>Opening the UI</h2>
+  <p></p>
+
+  <h2>Loading Traces</h2>
+  <p></p>
+</section>
+
+
+<!-- What next?
+================================================== -->
+<section id="what-next">
+  <div class="page-header">
+    <h1>5. What next?</h1>
+  </div>
+  <p class="lead">You're not done yet!</p>
+  <p>To get the most from the tracing framework you'll need to adjust settings, instrument your code, and learn what all the data means.</p>
+
+  <h4><a href="./event-providers.html">Tweak Provider Settings</a></h4>
+  <p>Enable or disable built-in event providers to get more information or reduce tracing overhead.</p>
+
+  <h4><a href="./instrumenting-code.html">Instrument your Code</a></h4>
+  <p>Get the most out of traces by efficiently tracing your application and its data.</p>
+
+  <h4><a href="./analyzing-traces.html">Learn how to Understand Traces</a></h4>
+  <p>Find out what the different data means and how to get useful information out of traces.</p>
+
+  <h4><a href="./advanced-features.html">Experiment with Advanced Features</a></h4>
+  <p>Learn more about the advanced features of the framework such as native browser tracing, remote control, and memory allocation tracking.</p>
+
+  <h4><a href="./extend.html">Extend the Framework</a></h4>
+  <p>Add your own custom data providers and visualizers.</p>
+</section>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright 2013 Google, Inc.</p>
+        <p>All code released under a <a href="https://github.com/google/tracing-framework/blob/master/LICENSE">BSD-style license</a>.</p>
+        <p>Page built with <a href="https://github.com/twitter/bootstrap">Twitter Bootstrap</a>.</p>
+        <ul class="footer-links">
+          <li><a href="https://github.com/google/tracing-framework/">GitHub project</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/google/tracing-framework/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/google/tracing-framework/commits/master">Changes</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/prettify.js"></script>
+    <script src="bootstrap/js/application.js"></script>
+  </body>
+</html>
